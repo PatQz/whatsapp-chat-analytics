@@ -1,12 +1,41 @@
-# My Whatsapp Group Analytics
+#  GDG Hermosillo: Radiografía de una Comunidad en WhatsApp
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Analysis of chat group data of whatsapp.
+## Contexto del proyecto
 
-## Project Organization
+Las comunidades tecnológicas modernas se construyen y dinamizan a través de canales de mensajería instantánea. Este proyecto consiste en un **pipeline de análisis de datos y procesamiento de lenguaje natural (PLN)** aplicado al historial de chat de la comunidad **GDG Hermosillo**. 
+
+El objetivo principal es transformar miles de mensajes crudos en **métricas accionables y visualizaciones limpias** que permitan entender el comportamiento, los intereses y los patrones de interacción de la comunidad.
+
+> **Nota de Privacidad:** Toda la información procesada ha sido **estrictamente anonimizada** (removiendo nombres reales, números telefónicos y datos sensibles) para proteger la privacidad de los miembros, cumpliendo con buenas prácticas de manejo de datos.
+> 
+>  **Rango de Tiempo Analizado:** De **Noviembre 2025** a **Septiembre 2026**
+
+---
+
+### Dimensiones clave del análisis
+
+* **Patrones Temporales:** Identificación de los momentos de mayor actividad de la comunidad (destacando picos los jueves por la noche y los sábados).
+* **Perfiles de Participación:** Análisis del volumen de mensajes, longitud promedio, y diferenciación entre miembros activos, debates profundos y reacciones rápidas (emojis).
+* **Procesamiento de Lenguaje Natural (PLN):** Extracción semántica de adjetivos clave y generación de nubes de palabras mediante `spaCy` para mapear el enfoque técnico del grupo (foco en IA, agentes y arquitectura).
+* **Ecosistema de Recursos:** Mapeo de enlaces y plataformas externas más compartidas, revelando una preferencia por recursos audiovisuales y de desarrollo (`YouTube`, `LinkedIn` y `GitHub`).
+
+---
+
+### Stack tecnológico
+
+El proyecto está desarrollado en **Python** bajo una arquitectura modular y limpia, utilizando librerías estándar de ciencia de datos:
+
+* **Procesamiento y análisis:** `pandas`, `spaCy`, `NLTK`, `emoji`
+* **Visualización:** `matplotlib`, `seaborn`, `wordcloud`
+* **Automatización y arquitectura:** `Typer` (CLI), `loguru` (Logging estructurado)
+
+---
+
+## Organización del proycto
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
@@ -39,20 +68,15 @@ Analysis of chat group data of whatsapp.
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── my_whatsapp_group_analytics   <- Source code for use in this project.
+└── modules   <- Source code for use in this project.
     │
-    ├── __init__.py             <- Makes my_whatsapp_group_analytics a Python module
+    ├── __init__.py             <- Makes modules folder a Python module
     │
     ├── config.py               <- Store useful variables and configuration
     │
     ├── dataset.py              <- Scripts to download or generate data
     │
     ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
     │
     └── plots.py                <- Code to create visualizations
 ```
